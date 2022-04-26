@@ -1,0 +1,37 @@
+{
+  "name": "snail",
+  "palette": {
+    "red": [255, 0, 0],
+    "white": [255, 255, 255],
+    "blue": [51, 153, 255],
+    "black": [0, 0, 0],
+    "dark_green": [75, 150, 60],
+    "light_blue": [86, 245, 240],
+    "light_green": [136, 186, 130],
+    "brown": [89, 54, 12],
+    "tan": [247, 208, 91],
+    "bg": null
+  },
+  "shape": [
+    ["bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg"],
+    ["bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg"],
+    ["bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg"],
+    ["bg","bg","bg","black","black","black","black","black","bg","bg","bg","bg","dark_green","bg","dark_green","bg"],
+    ["bg","bg","black","tan","tan","tan","tan","tan","black","bg","bg","bg","bg","light_blue","dark_green","bg"],
+    ["bg","black","tan","brown","brown","brown","brown","brown","tan","black","bg","bg","bg","light_green","bg","dark_green"],
+    ["black","tan","brown","brown","brown","tan","brown","brown","brown","tan","black","bg","bg","light_green","bg","light_blue"],
+    ["black","tan","brown","brown","tan","brown","tan","brown","brown","tan","black","bg","light_green","bg","bg","light_green"],
+    ["black","tan","brown","tan","brown","brown","tan","brown","brown","tan","black","dark_green","light_green","bg","light_green","bg"],
+    ["black","tan","brown","tan","brown","tan","brown","brown","tan","tan","black","dark_green","light_green","light_green","light_green","bg"],
+    ["black","brown","brown","tan","tan","tan","tan","tan","tan","brown","black","dark_green","light_green","light_green","light_green","bg"],
+    ["bg","black","brown","brown","brown","tan","tan","brown","brown","black","dark_green","light_green","light_green","light_green","bg","bg"],
+    ["bg","bg","black","brown","brown","brown","brown","brown","black","light_green","light_green","light_green","dark_green","bg","bg","bg"],
+    ["bg","light_green","light_green","black","black","black","black","black","light_green","light_green","light_green","light_green","dark_green","bg","bg","bg"],
+    ["dark_green","dark_green","dark_green","light_green","dark_green","light_green","dark_green","light_green","dark_green","light_green","dark_green","dark_green","bg","bg","bg","bg"],
+    ["bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg"]
+
+
+
+
+    ]
+}
