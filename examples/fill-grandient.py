@@ -1,5 +1,5 @@
 import pyglet
-from tickytacky.screen.screen import Screen
+from tickytacky.screen import Screen
 
 
 if __name__ == "__main__":

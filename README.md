@@ -13,7 +13,7 @@ Create a virtualenv, running Python3:
 mkvirtualenv --python=$(which python3) tickytacky-game
 ```
 
-Then, install the libary:
+Then, install the library:
 
 ```
 pip install tickytacky
@@ -24,3 +24,5 @@ Finally, run the game:
 ```
 python game.py
 ```
+
+The `examples/` folder contains one-off script demos which can also be run.
