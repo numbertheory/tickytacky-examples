@@ -1,6 +1,7 @@
-import pyglet
 from tickytacky.screen import Screen
 from tickytacky.sprite import Sprite
+from tickytacky.clock import Clock
+from tickytacky.run_app import RunApp
 
 sprites = Sprite(["snail_sprite.json"])
 main_screen = Screen(title="game",
@@ -22,7 +23,5 @@ def update(dt):
 if __name__ == "__main__":
     # Start it up!
     init()
-
-    pyglet.clock.schedule_interval(update, 1/12)
-
-    pyglet.app.run()
+    Clock().schedule_interval(update, 1/12)
+    RunApp().run()
