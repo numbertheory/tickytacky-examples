@@ -10,6 +10,7 @@ main_screen = Screen(title="game",
                      height=160,
                      width=240,
                      pixel_sprites=sprites.pixel_sprites)
+main_screen.set_fullscreen(True)
 
 
 def init():
