@@ -7,6 +7,8 @@ from tickytacky.run_app import RunApp
 sprites = Sprite(["snail_sprite.json"])
 main_screen = Screen(title="game",
                      fixed=True,
+                     height=160,
+                     width=240,
                      pixel_sprites=sprites.pixel_sprites)
 
 
@@ -53,8 +55,6 @@ def on_text_motion(motion):
         key.MOTION_RIGHT: right
     }
     arrow_keys[motion]()
-
-
 
 
 if __name__ == "__main__":
