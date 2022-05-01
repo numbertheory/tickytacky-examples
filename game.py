@@ -13,12 +13,13 @@ main_screen = Scene(title="game",
 
 
 def init():
-    main_screen.window.add_sprite("snail", [10, 10])
-    main_screen.window.add_sprite("floor1", [30, 30])
+    main_screen.window.sprites["floor1"]["location"] = [20, 20]
+    main_screen.window.sprites["snail"]["location"] = [100, 20]
+    main_screen.window.draw_all_sprites(["snail", "floor1"])
 
 
 def snail(new_loc=False):
-    old_loc = main_screen.pixel_sprites["snail"].get("location")
+    old_loc = main_screen.window.sprites["snail"].get("location")
     if new_loc:
         move_snail = [old_loc[0] + new_loc[0], old_loc[1] + new_loc[1]]
         main_screen.window.add_sprite("snail", move_snail)
@@ -27,8 +28,7 @@ def snail(new_loc=False):
 
 
 def update(dt):
-    main_screen.update_scene()
-    snail()
+    main_screen.window.draw_all_sprites(["snail", "floor1"])
 
 
 def up():
@@ -57,6 +57,13 @@ def on_text_motion(motion):
         key.MOTION_RIGHT: right
     }
     arrow_keys[motion]()
+
+
+@main_screen.window.event
+def on_draw():
+    main_screen.window.draw_all_sprites(["snail", "floor1"])
+    main_screen.window.draw_all_sprites(["snail"])
+
 
 
 if __name__ == "__main__":
