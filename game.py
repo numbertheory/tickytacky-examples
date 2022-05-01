@@ -10,7 +10,7 @@ main_screen = Scene(title="game",
 
 
 if __name__ == "__main__":
-    print(main_screen.sprites)
-    main_screen.sprites["snail"]["location"] = [10, 10]
-    main_screen.sprites["floor1"]["location"] = [20, 20]
+    main_screen.window.sprites["floor1"]["location"] = [20, 20]
+    main_screen.window.sprites["snail"]["location"] = [100, 20]
+    main_screen.window.draw_all_sprites(["snail", "floor1"])
     RunApp().run()
