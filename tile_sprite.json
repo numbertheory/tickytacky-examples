@@ -1,0 +1,21 @@
+{
+  "name": "floor1",
+  "palette": {
+    "tan": [233, 185, 110],
+    "brown": [193, 125, 17],
+    "yellow": [252, 233, 79],
+    "orange": [245, 121, 0],
+    "maroon": [164, 0, 0],
+    "bg": null},
+  "shape": [
+     ["yellow","maroon","yellow","yellow","yellow","yellow","yellow","yellow","maroon","yellow"],
+     ["maroon","brown","orange","brown","orange","brown","orange","brown","orange","maroon"],
+     ["yellow","orange","tan","yellow","yellow","yellow","yellow","tan","brown","yellow"],
+     ["yellow","brown","yellow","maroon","maroon","maroon","maroon","yellow","orange","yellow"],
+     ["yellow","orange","yellow","maroon","maroon","maroon","maroon","yellow","brown","yellow"],
+     ["yellow","brown","yellow","maroon","maroon","maroon","maroon","yellow","orange","yellow"],
+     ["yellow","orange","yellow","maroon","maroon","maroon","maroon","yellow","brown","yellow"],
+     ["yellow","brown","tan","yellow","yellow","yellow","yellow","tan","orange","yellow"],
+     ["maroon","orange","brown","orange","brown","orange","brown","orange","brown","maroon"],
+     ["yellow","maroon","yellow","yellow","yellow","yellow","yellow","yellow","maroon","yellow"]
+]}

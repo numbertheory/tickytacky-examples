@@ -1,38 +1,34 @@
 from pyglet.window import key
-from tickytacky.screen import Screen
-from tickytacky.sprite import Sprite
+from tickytacky.scene import Scene
 from tickytacky.clock import Clock
 from tickytacky.run_app import RunApp
 
-sprites = Sprite(["snail_sprite.json"])
-main_screen = Screen(title="game",
-                     fixed=True,
-                     height=160,
-                     width=240,
-                     pixel_sprites=sprites.pixel_sprites)
+
+main_screen = Scene(title="game",
+                    fixed=True,
+                    height=160,
+                    width=240,
+                    sprites=["snail_sprite.json", "tile_sprite.json"])
 # main_screen.set_fullscreen(True)
 
 
 def init():
-    main_screen.add_sprite("snail", [10, 10])
-    main_screen.text(text="hello there",
-                     font_directory="fonts/",
-                     size=72,
-                     font="VCR OSD Mono", position=[100, 100])
+    main_screen.window.add_sprite("snail", [10, 10])
+    main_screen.window.add_sprite("floor1", [30, 30])
 
 
 def snail(new_loc=False):
-    old_loc = main_screen.sprites["snail"]["location"]
+    old_loc = main_screen.pixel_sprites["snail"].get("location")
     if new_loc:
         move_snail = [old_loc[0] + new_loc[0], old_loc[1] + new_loc[1]]
-        main_screen.add_sprite("snail", move_snail)
+        main_screen.window.add_sprite("snail", move_snail)
     else:
-        main_screen.add_sprite("snail", old_loc)
+        main_screen.window.add_sprite("snail", old_loc)
 
 
 def update(dt):
+    main_screen.update_scene()
     snail()
-    pass
 
 
 def up():
@@ -51,8 +47,9 @@ def right():
     snail([1, 0])
 
 
-@main_screen.event
+@main_screen.window.event
 def on_text_motion(motion):
+    snail()
     arrow_keys = {
         key.MOTION_UP: up,
         key.MOTION_DOWN: down,
