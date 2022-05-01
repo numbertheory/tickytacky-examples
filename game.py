@@ -10,11 +10,15 @@ main_screen = Screen(title="game",
                      height=160,
                      width=240,
                      pixel_sprites=sprites.pixel_sprites)
-main_screen.set_fullscreen(True)
+# main_screen.set_fullscreen(True)
 
 
 def init():
     main_screen.add_sprite("snail", [10, 10])
+    main_screen.text(text="hello there",
+                     font_directory="fonts/",
+                     size=72,
+                     font="VCR OSD Mono", position=[100, 100])
 
 
 def snail(new_loc=False):
@@ -61,5 +65,5 @@ def on_text_motion(motion):
 if __name__ == "__main__":
     # Start it up!
     init()
-    Clock().schedule_interval(update, 1/12)
+    Clock().schedule_interval(update, 1/36)
     RunApp().run()
