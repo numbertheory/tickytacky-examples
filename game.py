@@ -57,7 +57,11 @@ def on_text_motion(motion):
         key.MOTION_LEFT: left,
         key.MOTION_RIGHT: right
     }
-    arrow_keys[motion]()
+    try:
+        arrow_keys[motion]()
+    except KeyError:
+        # not all motion keys are mapped
+        pass
 
 
 @main_screen.window.event
