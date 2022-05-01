@@ -1,4 +1,5 @@
 from pyglet.window import key
+import pyglet
 from tickytacky.scene import Scene
 from tickytacky.clock import Clock
 from tickytacky.run_app import RunApp
@@ -10,6 +11,19 @@ main_screen = Scene(title="game",
                     width=240,
                     sprites=["snail_sprite.json", "tile_sprite.json"])
 main_screen.window.set_fullscreen(True)
+
+ball_image = pyglet.image.load('tile.png')
+ball = []
+for x in range(0, 400):
+    ball.append(
+        pyglet.sprite.Sprite(
+            ball_image, x=x*2, y=900, batch=main_screen.window.batch)
+    )
+    ball.append(
+        pyglet.sprite.Sprite(
+            ball_image, x=x*2, y=800, batch=main_screen.window.batch)
+    )
+print(len(ball))
 
 
 def init():
