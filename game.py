@@ -9,13 +9,14 @@ main_screen = Scene(title="game",
                     height=160,
                     width=240,
                     sprites=["snail_sprite.json", "tile_sprite.json"])
-# main_screen.set_fullscreen(True)
+main_screen.window.set_fullscreen(True)
 
 
 def init():
     main_screen.window.sprites["floor1"]["location"] = [20, 20]
     main_screen.window.sprites["snail"]["location"] = [100, 20]
     main_screen.window.draw_all_sprites(["snail", "floor1"])
+    main_screen.window.text(text="hello", position=[100, 100])
 
 
 def snail(new_loc=False):
