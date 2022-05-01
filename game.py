@@ -66,7 +66,6 @@ def on_draw():
     main_screen.window.draw_all_sprites(["snail"])
 
 
-
 if __name__ == "__main__":
     # Start it up!
     init()
