@@ -8,9 +8,8 @@ main_screen = Scene(title="game",
                     height=160,
                     width=240,
                     sprites=["snail_sprite.json"],
-                    tile_files=["tile_sprite.json"],
+                    tile_files=["tile_inv.json", "tile_obv.json"],
                     scene_data="scene_data.json")
-main_screen.window.set_fullscreen(True)
 
 
 def init():
@@ -30,7 +29,6 @@ def snail(new_loc=False):
 
 
 def update(dt):
-    main_screen.load_scene("scene1")
     main_screen.window.draw_all_sprites(["snail"])
 
 
@@ -50,6 +48,25 @@ def right():
     snail([1, 0])
 
 
+def switch_scene():
+    if main_screen.current_scene == "scene1":
+        main_screen.load_scene("scene2")
+    elif main_screen.current_scene == "scene2":
+        main_screen.load_scene("scene1")
+
+
+@main_screen.window.event
+def on_key_press(symbol, modifiers):
+    key_binds = {
+        key.C: switch_scene
+    }
+    try:
+        key_binds[symbol]()
+    except KeyError:
+        # not all motion keys are mapped
+        pass
+
+
 @main_screen.window.event
 def on_text_motion(motion):
     snail()
@@ -57,7 +74,7 @@ def on_text_motion(motion):
         key.MOTION_UP: up,
         key.MOTION_DOWN: down,
         key.MOTION_LEFT: left,
-        key.MOTION_RIGHT: right
+        key.MOTION_RIGHT: right,
     }
     try:
         arrow_keys[motion]()

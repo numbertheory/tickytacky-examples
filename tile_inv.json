@@ -1,0 +1,21 @@
+{
+  "name": "floor1",
+  "palette": {
+    "tan": [233, 185, 110],
+    "brown": [193, 125, 17],
+    "green": [115, 210, 22],
+    "orange": [245, 121, 0],
+    "maroon": [164, 0, 0],
+    "bg": null},
+  "shape": [
+     ["green","maroon","green","green","green","green","green","green","maroon","green"],
+     ["maroon","brown","orange","brown","orange","brown","orange","brown","orange","maroon"],
+     ["green","orange","tan","green","green","green","green","tan","brown","green"],
+     ["green","brown","green","maroon","maroon","maroon","maroon","green","orange","green"],
+     ["green","orange","green","maroon","maroon","maroon","maroon","green","brown","green"],
+     ["green","brown","green","maroon","maroon","maroon","maroon","green","orange","green"],
+     ["green","orange","green","maroon","maroon","maroon","maroon","green","brown","green"],
+     ["green","brown","tan","green","green","green","green","tan","orange","green"],
+     ["maroon","orange","brown","orange","brown","orange","brown","orange","brown","maroon"],
+     ["green","maroon","green","green","green","green","green","green","maroon","green"]
+]}
