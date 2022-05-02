@@ -4,8 +4,6 @@ from tickytacky.scene import Scene
 from tickytacky.clock import Clock
 from tickytacky.run_app import RunApp
 from tickytacky.sprite import Tiles
-from PIL import Image
-
 
 main_screen = Scene(title="game",
                     fixed=True,
