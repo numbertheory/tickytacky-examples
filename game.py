@@ -3,33 +3,34 @@ import pyglet
 from tickytacky.scene import Scene
 from tickytacky.clock import Clock
 from tickytacky.run_app import RunApp
+from tickytacky.sprite import Tiles
+from PIL import Image
 
 
 main_screen = Scene(title="game",
                     fixed=True,
                     height=160,
                     width=240,
-                    sprites=["snail_sprite.json", "tile_sprite.json"])
+                    sprites=["snail_sprite.json"])
 main_screen.window.set_fullscreen(True)
 
-ball_image = pyglet.image.load('tile.png')
 ball = []
-for x in range(0, 400):
-    ball.append(
-        pyglet.sprite.Sprite(
-            ball_image, x=x*2, y=900, batch=main_screen.window.batch)
-    )
-    ball.append(
-        pyglet.sprite.Sprite(
-            ball_image, x=x*2, y=800, batch=main_screen.window.batch)
-    )
-print(len(ball))
+sqr = Tiles(tile_files=["tile_sprite.json"])
+ball_image = sqr.tile_data["floor1"]
+
+ball.append(
+    pyglet.sprite.Sprite(
+        ball_image, x=0, y=900, batch=main_screen.window.batch)
+)
+ball.append(
+    pyglet.sprite.Sprite(
+        ball_image, x=0, y=800, batch=main_screen.window.batch)
+)
 
 
 def init():
-    main_screen.window.sprites["floor1"]["location"] = [20, 20]
     main_screen.window.sprites["snail"]["location"] = [100, 20]
-    main_screen.window.draw_all_sprites(["snail", "floor1"])
+    main_screen.window.draw_all_sprites(["snail"])
     main_screen.window.text(text="hello", position=[100, 100])
 
 
@@ -43,7 +44,7 @@ def snail(new_loc=False):
 
 
 def update(dt):
-    main_screen.window.draw_all_sprites(["snail", "floor1"])
+    main_screen.window.draw_all_sprites(["snail"])
 
 
 def up():
@@ -80,7 +81,6 @@ def on_text_motion(motion):
 
 @main_screen.window.event
 def on_draw():
-    main_screen.window.draw_all_sprites(["snail", "floor1"])
     main_screen.window.draw_all_sprites(["snail"])
 
 
