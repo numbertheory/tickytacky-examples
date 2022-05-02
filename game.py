@@ -16,7 +16,10 @@ def init():
     main_screen.window.sprites["snail"]["location"] = [100, 20]
     main_screen.window.draw_all_sprites(["snail"])
     main_screen.load_scene("scene1")
-    main_screen.window.text(text="hello", position=[100, 100])
+    main_screen.window.text(text="Press C to change scenery.",
+                            font_directory="fonts/",
+                            font="VCR OSD Mono",
+                            position=[100, 100])
 
 
 def snail(new_loc=False):
@@ -69,7 +72,6 @@ def on_key_press(symbol, modifiers):
 
 @main_screen.window.event
 def on_text_motion(motion):
-    snail()
     arrow_keys = {
         key.MOTION_UP: up,
         key.MOTION_DOWN: down,
