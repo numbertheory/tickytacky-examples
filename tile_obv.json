@@ -1,5 +1,6 @@
 {
   "name": "floor2",
+  "wall": true,
   "palette": {
     "tan": [233, 185, 110],
     "brown": [193, 125, 17],
