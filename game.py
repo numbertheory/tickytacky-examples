@@ -51,13 +51,6 @@ def right():
     snail([1, 0])
 
 
-def switch_scene():
-    if main_screen.current_scene == "scene1":
-        main_screen.load_scene("scene2")
-    elif main_screen.current_scene == "scene2":
-        main_screen.load_scene("scene1")
-
-
 @main_screen.window.event
 def on_key_press(symbol, modifiers):
     key_binds = {
@@ -68,6 +61,15 @@ def on_key_press(symbol, modifiers):
     except KeyError:
         # not all motion keys are mapped
         pass
+
+
+def switch_scene():
+    if not main_screen.current_scene:
+        main_screen.current_scene = "scene1"
+    if main_screen.current_scene == "scene1":
+        main_screen.load_scene("scene2")
+    elif main_screen.current_scene == "scene2":
+        main_screen.load_scene("scene1")
 
 
 @main_screen.window.event
