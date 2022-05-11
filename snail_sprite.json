@@ -13,9 +13,6 @@
     "bg": null
   },
   "shape": [
-    ["bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg"],
-    ["bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg"],
-    ["bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg"],
     ["bg","bg","bg","black","black","black","black","black","bg","bg","bg","bg","dark_green","bg","dark_green","bg"],
     ["bg","bg","black","tan","tan","tan","tan","tan","black","bg","bg","bg","bg","light_blue","dark_green","bg"],
     ["bg","black","tan","brown","brown","brown","brown","brown","tan","black","bg","bg","bg","light_green","bg","dark_green"],
@@ -27,11 +24,6 @@
     ["bg","black","brown","brown","brown","tan","tan","brown","brown","black","dark_green","light_green","light_green","light_green","bg","bg"],
     ["bg","bg","black","brown","brown","brown","brown","brown","black","light_green","light_green","light_green","dark_green","bg","bg","bg"],
     ["bg","light_green","light_green","black","black","black","black","black","light_green","light_green","light_green","light_green","dark_green","bg","bg","bg"],
-    ["dark_green","dark_green","dark_green","light_green","dark_green","light_green","dark_green","light_green","dark_green","light_green","dark_green","dark_green","bg","bg","bg","bg"],
-    ["bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg"]
-
-
-
-
-    ]
+    ["dark_green","dark_green","dark_green","light_green","dark_green","light_green","dark_green","light_green","dark_green","light_green","dark_green","dark_green","bg","bg","bg","bg"]
+  ]
 }

@@ -36,19 +36,69 @@ def update(dt):
 
 
 def up():
-    snail([0, -1])
+    can_go_up = True
+    current_location = main_screen.window.sprites["snail"].get("location")
+    width = main_screen.window.sprites["snail"].get("size")[0]
+    for wall in main_screen.walls:
+        if can_go_up:
+            y_diff = [wall[1], wall[3]]
+            x_diff = [wall[0] - width, wall[2] + width]
+            judge_y = y_diff[0] <= current_location[1] <= y_diff[1]
+            judge_x = x_diff[0] <= current_location[0] <= x_diff[1]
+            if judge_y and judge_x:
+                can_go_up = False
+    if can_go_up:
+        snail([0, -1])
 
 
 def down():
-    snail([0, 1])
+    can_go_down = True
+    current_location = main_screen.window.sprites["snail"].get("location")
+    width = main_screen.window.sprites["snail"].get("size")[0]
+    height = main_screen.window.sprites["snail"].get("size")[1]
+    for wall in main_screen.walls:
+        if can_go_down:
+            y_diff = [wall[1] - height, wall[3] - height]
+            x_diff = [wall[0] - width, wall[2]]
+            judge_y = y_diff[0] <= current_location[1] <= y_diff[1]
+            judge_x = x_diff[0] <= current_location[0] <= x_diff[1]
+            if judge_y and judge_x:
+                can_go_down = False
+    if can_go_down:
+        snail([0, 1])
 
 
 def left():
-    snail([-1, 0])
+    can_go_left = True
+    current_location = main_screen.window.sprites["snail"].get("location")
+    height = main_screen.window.sprites["snail"].get("size")[1] - 1
+    for wall in main_screen.walls:
+        if can_go_left:
+            y_diff = [wall[1] - height, wall[3] - height]
+            x_diff = [wall[0], wall[2]]
+            judge_y = y_diff[0] <= current_location[1] <= y_diff[1]
+            judge_x = x_diff[0] <= current_location[0] <= x_diff[1]
+            if judge_y and judge_x:
+                can_go_left = False
+    if can_go_left:
+        snail([-1, 0])
 
 
 def right():
-    snail([1, 0])
+    can_go_right = True
+    current_location = main_screen.window.sprites["snail"].get("location")
+    height = main_screen.window.sprites["snail"].get("size")[1] - 1
+    width = main_screen.window.sprites["snail"].get("size")[0]
+    for wall in main_screen.walls:
+        if can_go_right:
+            y_diff = [wall[1] - height, wall[3]]
+            x_diff = [wall[0] + width, wall[2]]
+            judge_y = y_diff[0] <= current_location[1] <= y_diff[1]
+            judge_x = x_diff[0] <= current_location[0] <= x_diff[1]
+            if judge_x and judge_y:
+                can_go_right = False
+    if can_go_right:
+        snail([1, 0])
 
 
 @main_screen.window.event
